@@ -11,8 +11,11 @@
 #import "JSONParser.h"
 #import "Question.h"
 
-@interface QuestionSearchViewController ()
+@interface QuestionSearchViewController () <UITableViewDataSource, UISearchBarDelegate>
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSArray<Question *> *questionsDataSource;
 
 @end
 
@@ -25,11 +28,9 @@
     [StackOverflow searchWithTerm:@"iOS" withCompletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
             if (error == nil) {
                 NSLog(@"DATA: %@", data);
-                NSArray *questions = [JSONParser questionsArrayFromDictionary:data];
-                
-                for (Question *question in questions) {
-                    NSLog(@"%@", question.title);
-                }
+                self.questionsDataSource = [JSONParser questionsArrayFromDictionary:data];
+                [self.tableView reloadData];
+             
             }
     }];
     
@@ -44,6 +45,31 @@
 +(NSString *)identifier
 {
     return @"QuestionSearchViewController";
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.questionsDataSource.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"questionCell" forIndexPath:indexPath];
+    cell.textLabel.text = self.questionsDataSource[indexPath.row].title;
+
+    return cell;
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [StackOverflow searchWithTerm:searchBar.text withCompletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
+        if (error == nil) {
+            self.questionsDataSource = [JSONParser questionsArrayFromDictionary:data];
+            [self.tableView reloadData];
+        }
+    }];
+    
+    [self resignFirstResponder];
 }
 
 @end

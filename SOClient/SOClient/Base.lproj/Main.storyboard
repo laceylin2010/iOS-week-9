@@ -92,8 +92,54 @@
                     <view key="view" contentMode="scaleToFill" id="7ex-Jr-y4L">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NP9-ta-wjH">
+                                <rect key="frame" x="0.0" y="61" width="600" height="539"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="cFu-V8-MSf">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="XpG-RC-tYB" id="1eX-Ml-TJ3"/>
+                                    </connections>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionCell" textLabel="Fmq-Cw-nXj" style="IBUITableViewCellStyleDefault" id="ckf-S9-MxP">
+                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ckf-S9-MxP" id="myc-Nt-nhh">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fmq-Cw-nXj">
+                                                    <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="XpG-RC-tYB" id="wwB-D7-M3w"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NP9-ta-wjH" secondAttribute="trailing" id="0eU-uD-cxH"/>
+                            <constraint firstItem="NP9-ta-wjH" firstAttribute="leading" secondItem="7ex-Jr-y4L" secondAttribute="leading" id="aIZ-3d-egG"/>
+                            <constraint firstItem="uqP-Q7-yx4" firstAttribute="top" secondItem="NP9-ta-wjH" secondAttribute="bottom" id="ca6-Df-HL9"/>
+                            <constraint firstItem="NP9-ta-wjH" firstAttribute="top" secondItem="ffp-rB-2OG" secondAttribute="bottom" constant="41" id="e49-05-O4N"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="cFu-V8-MSf" id="twk-Hn-i6n"/>
+                        <outlet property="tableView" destination="NP9-ta-wjH" id="e5Y-f3-8vU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cHH-Ux-W3T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
