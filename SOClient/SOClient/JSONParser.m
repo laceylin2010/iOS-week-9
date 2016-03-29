@@ -33,6 +33,29 @@
     return result;
 }
 
+
++(NSMutableArray * _Nullable)usersArrayFromDictionary:(NSDictionary * _Nullable)dictionary
+{
+    NSMutableArray *result = [NSMutableArray new];
+    if (dictionary) {
+        NSMutableArray *items = dictionary[@"items"];
+        if (items) {
+            for (NSDictionary *usersDictionary in items) {
+                User *newUser = [self userFromDictionary:usersDictionary];
+                
+                if (newUser != nil) {
+                    [result addObject:newUser];
+                }
+            }
+        }
+        
+    }
+    
+    return result;
+}
+
+
+
 +(Question * _Nullable)questionFromDictionary:(NSDictionary *)questionDictionary
 {
     NSString *title = questionDictionary[@"title"];

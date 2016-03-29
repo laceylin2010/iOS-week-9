@@ -13,5 +13,6 @@ typedef void(^kNSDictionaryCompletionHandler)(NSDictionary * _Nullable data, NSE
 @interface StackOverflow : NSObject
 
 +(void)searchWithTerm:(NSString * _Nonnull)searchTerm withCompletion:(kNSDictionaryCompletionHandler _Nonnull)completionHandler;
++(void)searchUserWithTerm:(NSString * _Nonnull)searchTerm withCompletion:(kNSDictionaryCompletionHandler _Nonnull)completionHandler;
 
 @end

@@ -12,6 +12,6 @@ typedef void(^kNSDataCompletionHandler)(NSDictionary * _Nullable data, NSError *
 
 @interface APIService : NSObject
 
-+(void)getRequestWithURLString:(NSString * _Nonnull)url withCompletion:(kNSDataCompletionHandler)completionHandler;
++(void)getRequestWithURLString:(NSString * _Nonnull)url withCompletion:(kNSDataCompletionHandler _Nullable)completionHandler;
 
 @end

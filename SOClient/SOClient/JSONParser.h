@@ -11,5 +11,6 @@
 @interface JSONParser : NSObject
 
 +(NSMutableArray * _Nullable)questionsArrayFromDictionary:(NSDictionary * _Nullable)dictionary;
++(NSMutableArray * _Nullable)usersArrayFromDictionary:(NSDictionary * _Nullable)dictionary;
 
 @end
