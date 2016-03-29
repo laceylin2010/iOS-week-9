@@ -19,6 +19,11 @@
 		AF29741C1CA9A0EA00A13171 /* UserSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29741B1CA9A0EA00A13171 /* UserSearchViewController.m */; };
 		AF29741F1CA9A1DB00A13171 /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29741E1CA9A1DB00A13171 /* MenuViewController.m */; };
 		AF2974221CA9A26500A13171 /* BurgerContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2974211CA9A26500A13171 /* BurgerContainerViewController.m */; };
+		AF29742D1CAAF07E00A13171 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = AF29742C1CAAF07E00A13171 /* User.m */; };
+		AF2974311CAAF1DF00A13171 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2974301CAAF1DF00A13171 /* Question.m */; };
+		AF2974341CAAF35300A13171 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2974331CAAF35300A13171 /* APIService.m */; };
+		AF2974371CAAF55E00A13171 /* StackOverflow.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2974361CAAF55E00A13171 /* StackOverflow.m */; };
+		AF29743A1CAB0A6300A13171 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2974391CAB0A6300A13171 /* JSONParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +63,16 @@
 		AF29741E1CA9A1DB00A13171 /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		AF2974201CA9A26500A13171 /* BurgerContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerContainerViewController.h; sourceTree = "<group>"; };
 		AF2974211CA9A26500A13171 /* BurgerContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerContainerViewController.m; sourceTree = "<group>"; };
+		AF29742B1CAAF07E00A13171 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		AF29742C1CAAF07E00A13171 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		AF29742F1CAAF1DF00A13171 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		AF2974301CAAF1DF00A13171 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		AF2974321CAAF35300A13171 /* APIService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIService.h; sourceTree = "<group>"; };
+		AF2974331CAAF35300A13171 /* APIService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIService.m; sourceTree = "<group>"; };
+		AF2974351CAAF55E00A13171 /* StackOverflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverflow.h; sourceTree = "<group>"; };
+		AF2974361CAAF55E00A13171 /* StackOverflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflow.m; sourceTree = "<group>"; };
+		AF2974381CAB0A6300A13171 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
+		AF2974391CAB0A6300A13171 /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +116,7 @@
 		AF2973FA1CA9880300A13171 /* SOClient */ = {
 			isa = PBXGroup;
 			children = (
+				AF29742E1CAAF08300A13171 /* Model */,
 				AF2974121CA9881000A13171 /* Controllers */,
 				AF2974131CA9881D00A13171 /* Views */,
 				AF2973FB1CA9880300A13171 /* Supporting Files */,
@@ -146,6 +162,23 @@
 				AF2974041CA9880300A13171 /* Main.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		AF29742E1CAAF08300A13171 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF29742B1CAAF07E00A13171 /* User.h */,
+				AF29742C1CAAF07E00A13171 /* User.m */,
+				AF2974321CAAF35300A13171 /* APIService.h */,
+				AF2974331CAAF35300A13171 /* APIService.m */,
+				AF29742F1CAAF1DF00A13171 /* Question.h */,
+				AF2974301CAAF1DF00A13171 /* Question.m */,
+				AF2974351CAAF55E00A13171 /* StackOverflow.h */,
+				AF2974361CAAF55E00A13171 /* StackOverflow.m */,
+				AF2974381CAB0A6300A13171 /* JSONParser.h */,
+				AF2974391CAB0A6300A13171 /* JSONParser.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		D761A7D2686980B6BB0F1585 /* Pods */ = {
@@ -279,14 +312,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF2974371CAAF55E00A13171 /* StackOverflow.m in Sources */,
 				AF2974161CA9882F00A13171 /* OAuthViewController.m in Sources */,
 				AF2974031CA9880300A13171 /* ViewController.m in Sources */,
+				AF2974341CAAF35300A13171 /* APIService.m in Sources */,
+				AF29742D1CAAF07E00A13171 /* User.m in Sources */,
 				AF2974001CA9880300A13171 /* AppDelegate.m in Sources */,
 				AF2974221CA9A26500A13171 /* BurgerContainerViewController.m in Sources */,
 				AF2974191CA9A0DF00A13171 /* QuestionSearchViewController.m in Sources */,
 				AF29741F1CA9A1DB00A13171 /* MenuViewController.m in Sources */,
+				AF2974311CAAF1DF00A13171 /* Question.m in Sources */,
 				AF2973FD1CA9880300A13171 /* main.m in Sources */,
 				AF29741C1CA9A0EA00A13171 /* UserSearchViewController.m in Sources */,
+				AF29743A1CAB0A6300A13171 /* JSONParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

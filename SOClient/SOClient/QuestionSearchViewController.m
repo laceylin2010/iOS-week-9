@@ -7,6 +7,9 @@
 //
 
 #import "QuestionSearchViewController.h"
+#import "StackOverflow.h"
+#import "JSONParser.h"
+#import "Question.h"
 
 @interface QuestionSearchViewController ()
 
@@ -15,14 +18,27 @@
 
 @implementation QuestionSearchViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [StackOverflow searchWithTerm:@"iOS" withCompletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
+            if (error == nil) {
+                NSLog(@"DATA: %@", data);
+                NSArray *questions = [JSONParser questionsArrayFromDictionary:data];
+                
+                for (Question *question in questions) {
+                    NSLog(@"%@", question.title);
+                }
+            }
+    }];
+    
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
 +(NSString *)identifier
