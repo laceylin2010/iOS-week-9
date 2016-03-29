@@ -8,6 +8,7 @@
 
 #import "OAuthViewController.h"
 @import WebKit;
+@import Security;
 
 NSString const *kClientID = @"6793";
 NSString const *kBaseURL = @"https://stackexchange.com/oauth/dialog?";
@@ -94,6 +95,17 @@ NSString const *kRedirectURI = @"https://stackexchange.com/oauth/login_success";
         }
     }
 }
+
+
+//crashes the app when trying to save to keychain
+//-(BOOL)saveStringToKeychain:(NSString *)value ForKey:(NSString *)key
+//{
+//    NSMutableDictionary *keychain = [[NSMutableDictionary alloc]init];
+//    [keychain[(id)kSecValueData] = [NSKeyedArchiver archivedDataWithRootObject:value] objectForKey:key];
+//    SecItemDelete((CFDictionaryRef)keychain);
+//    SecItemAdd((CFDictionaryRef)keychain, NULL);
+//    return SecItemAdd((CFDictionaryRef)keychain, NULL) == errSecSuccess;
+//}
 
 
 -(void)saveStringToUserDefaults:(NSString *)value ForKey:(NSString *)key

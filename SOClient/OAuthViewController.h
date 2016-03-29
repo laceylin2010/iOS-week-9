@@ -16,4 +16,5 @@ typedef void(^OAuthWebViewControllerCompletion)();
 
 +(NSString *)identifier;
 
+
 @end

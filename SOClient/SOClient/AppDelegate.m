@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "OAuthViewController.h"
+@import Security;
 
 @interface AppDelegate ()
 
@@ -27,8 +28,14 @@
 {
     //change to keychain
     
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
+//    CFTypeRef *keychain = [kSecClass, kSecClassGenericPassword];
+//    CFTypeRef *accessToken = [keychain stringForKey:@"accessToken"];
+//
+    
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+
     NSString *accessToken = [userDefaults stringForKey:@"accessToken"];
     
     if (!accessToken) {
