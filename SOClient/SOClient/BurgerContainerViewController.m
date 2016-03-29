@@ -48,7 +48,7 @@ NSTimeInterval const kTimeToSlideClosed = 0.15;
     self.topViewController = self.viewControllers[0];
     
     [self setupPanGesture];
-    [self setupBurgerButtonWithImageName:@"burger"];
+    [self setupBurgerButtonWithImageName:@"menu"];
     
     
 }
@@ -202,7 +202,7 @@ NSTimeInterval const kTimeToSlideClosed = 0.15;
 
 -(void)setupBurgerButtonWithImageName:(NSString *)imageNamed
 {
-    CGRect burgerSize = CGRectMake(0,0, kBurgerButtonWidth, kBurgerButtonWidth);
+    CGRect burgerSize = CGRectMake(0,30, kBurgerButtonWidth, kBurgerButtonWidth);
     UIButton *burgerButton = [[UIButton alloc]initWithFrame:burgerSize];
     UIImage *buttonImage = [UIImage imageNamed:imageNamed];
     

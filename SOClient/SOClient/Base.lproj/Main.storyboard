@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Burger Container View Controller-->
@@ -94,19 +95,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NP9-ta-wjH">
-                                <rect key="frame" x="0.0" y="61" width="600" height="539"/>
+                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <searchBar key="tableHeaderView" contentMode="redraw" id="cFu-V8-MSf">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <textInputTraits key="textInputTraits"/>
-                                    <connections>
-                                        <outlet property="delegate" destination="XpG-RC-tYB" id="1eX-Ml-TJ3"/>
-                                    </connections>
-                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="questionCell" textLabel="Fmq-Cw-nXj" style="IBUITableViewCellStyleDefault" id="ckf-S9-MxP">
-                                        <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ckf-S9-MxP" id="myc-Nt-nhh">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
@@ -127,17 +120,27 @@
                                     <outlet property="dataSource" destination="XpG-RC-tYB" id="wwB-D7-M3w"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="var-s2-3aQ">
+                                <rect key="frame" x="50" y="30" width="550" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yne-Vn-T2A"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NP9-ta-wjH" secondAttribute="trailing" id="0eU-uD-cxH"/>
+                            <constraint firstItem="var-s2-3aQ" firstAttribute="top" secondItem="7ex-Jr-y4L" secondAttribute="topMargin" constant="30" id="DvG-Ds-d8q"/>
                             <constraint firstItem="NP9-ta-wjH" firstAttribute="leading" secondItem="7ex-Jr-y4L" secondAttribute="leading" id="aIZ-3d-egG"/>
                             <constraint firstItem="uqP-Q7-yx4" firstAttribute="top" secondItem="NP9-ta-wjH" secondAttribute="bottom" id="ca6-Df-HL9"/>
-                            <constraint firstItem="NP9-ta-wjH" firstAttribute="top" secondItem="ffp-rB-2OG" secondAttribute="bottom" constant="41" id="e49-05-O4N"/>
+                            <constraint firstItem="NP9-ta-wjH" firstAttribute="top" secondItem="ffp-rB-2OG" secondAttribute="bottom" constant="60" id="e49-05-O4N"/>
+                            <constraint firstAttribute="trailing" secondItem="var-s2-3aQ" secondAttribute="trailing" id="fEr-Qz-rHc"/>
+                            <constraint firstItem="var-s2-3aQ" firstAttribute="leading" secondItem="7ex-Jr-y4L" secondAttribute="leading" constant="50" id="jvI-hi-K5K"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="cFu-V8-MSf" id="twk-Hn-i6n"/>
+                        <outlet property="searchBar" destination="var-s2-3aQ" id="oyc-lK-yCf"/>
                         <outlet property="tableView" destination="NP9-ta-wjH" id="e5Y-f3-8vU"/>
                     </connections>
                 </viewController>
@@ -158,15 +161,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yrr-pG-Nd2">
-                                <rect key="frame" x="0.0" y="62" width="600" height="44"/>
+                                <rect key="frame" x="50" y="30" width="550" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Kek-tg-Rua"/>
+                                </constraints>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="6i2-W8-lCF" id="eoc-WZ-YM3"/>
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1u7-3V-Vul">
-                                <rect key="frame" x="0.0" y="106" width="600" height="494"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="0.0" y="80" width="600" height="520"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" textLabel="y7s-OX-K0R" style="IBUITableViewCellStyleDefault" id="Wj8-N0-Kqz">
                                         <rect key="frame" x="0.0" y="28" width="600" height="44"/>
@@ -191,15 +197,15 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.071230360679999993" green="0.98851653299999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="1u7-3V-Vul" firstAttribute="top" secondItem="tii-fE-705" secondAttribute="bottom" constant="86" id="1sb-18-6jh"/>
-                            <constraint firstItem="SeA-iO-YSn" firstAttribute="top" secondItem="1u7-3V-Vul" secondAttribute="bottom" id="MR4-fe-S7X"/>
-                            <constraint firstAttribute="trailing" secondItem="yrr-pG-Nd2" secondAttribute="trailing" id="QQa-xr-GqX"/>
-                            <constraint firstItem="1u7-3V-Vul" firstAttribute="leading" secondItem="UEW-HB-nz2" secondAttribute="leading" id="YJU-5K-WZs"/>
-                            <constraint firstItem="yrr-pG-Nd2" firstAttribute="leading" secondItem="UEW-HB-nz2" secondAttribute="leading" id="dTU-0Z-KD1"/>
-                            <constraint firstItem="yrr-pG-Nd2" firstAttribute="bottom" secondItem="1u7-3V-Vul" secondAttribute="top" id="h99-KE-itw"/>
-                            <constraint firstAttribute="trailing" secondItem="1u7-3V-Vul" secondAttribute="trailing" id="rAk-0i-u6Q"/>
+                            <constraint firstItem="yrr-pG-Nd2" firstAttribute="top" secondItem="tii-fE-705" secondAttribute="bottom" constant="10" id="1ee-P9-nqX"/>
+                            <constraint firstAttribute="trailing" secondItem="1u7-3V-Vul" secondAttribute="trailing" id="3pv-dU-d7g"/>
+                            <constraint firstItem="yrr-pG-Nd2" firstAttribute="leading" secondItem="UEW-HB-nz2" secondAttribute="leading" constant="50" id="5rB-5K-Lba"/>
+                            <constraint firstItem="1u7-3V-Vul" firstAttribute="top" secondItem="yrr-pG-Nd2" secondAttribute="bottom" id="KyI-8u-Btr"/>
+                            <constraint firstItem="1u7-3V-Vul" firstAttribute="leading" secondItem="UEW-HB-nz2" secondAttribute="leading" id="RIs-vf-eCc"/>
+                            <constraint firstItem="SeA-iO-YSn" firstAttribute="top" secondItem="1u7-3V-Vul" secondAttribute="bottom" id="RwJ-iu-8SM"/>
+                            <constraint firstAttribute="trailing" secondItem="yrr-pG-Nd2" secondAttribute="trailing" id="XT4-b2-zBz"/>
                         </constraints>
                     </view>
                     <connections>
