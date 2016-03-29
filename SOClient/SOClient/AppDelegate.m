@@ -25,6 +25,8 @@
 
 -(void)checkForAccessToken
 {
+    //change to keychain
+    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
     NSString *accessToken = [userDefaults stringForKey:@"accessToken"];
