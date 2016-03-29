@@ -128,7 +128,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="NP9-ta-wjH" secondAttribute="trailing" id="0eU-uD-cxH"/>
                             <constraint firstItem="var-s2-3aQ" firstAttribute="top" secondItem="7ex-Jr-y4L" secondAttribute="topMargin" constant="30" id="DvG-Ds-d8q"/>
@@ -197,7 +197,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yrr-pG-Nd2" firstAttribute="top" secondItem="tii-fE-705" secondAttribute="bottom" constant="10" id="1ee-P9-nqX"/>
                             <constraint firstAttribute="trailing" secondItem="1u7-3V-Vul" secondAttribute="trailing" id="3pv-dU-d7g"/>
