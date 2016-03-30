@@ -24,6 +24,8 @@
 		AF2974341CAAF35300A13171 /* APIService.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2974331CAAF35300A13171 /* APIService.m */; };
 		AF2974371CAAF55E00A13171 /* StackOverflow.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2974361CAAF55E00A13171 /* StackOverflow.m */; };
 		AF29743A1CAB0A6300A13171 /* JSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2974391CAB0A6300A13171 /* JSONParser.m */; };
+		AFC6977A1CAC3EE800E18C42 /* QuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC697781CAC3EE800E18C42 /* QuestionTableViewCell.m */; };
+		AFC6977B1CAC3EE800E18C42 /* QuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFC697791CAC3EE800E18C42 /* QuestionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -73,6 +75,9 @@
 		AF2974361CAAF55E00A13171 /* StackOverflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverflow.m; sourceTree = "<group>"; };
 		AF2974381CAB0A6300A13171 /* JSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONParser.h; sourceTree = "<group>"; };
 		AF2974391CAB0A6300A13171 /* JSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONParser.m; sourceTree = "<group>"; };
+		AFC697771CAC3EE800E18C42 /* QuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionTableViewCell.h; sourceTree = "<group>"; };
+		AFC697781CAC3EE800E18C42 /* QuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionTableViewCell.m; sourceTree = "<group>"; };
+		AFC697791CAC3EE800E18C42 /* QuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuestionTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +163,9 @@
 		AF2974131CA9881D00A13171 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AFC697771CAC3EE800E18C42 /* QuestionTableViewCell.h */,
+				AFC697781CAC3EE800E18C42 /* QuestionTableViewCell.m */,
+				AFC697791CAC3EE800E18C42 /* QuestionTableViewCell.xib */,
 				AF2974091CA9880300A13171 /* LaunchScreen.storyboard */,
 				AF2974041CA9880300A13171 /* Main.storyboard */,
 			);
@@ -252,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF29740B1CA9880300A13171 /* LaunchScreen.storyboard in Resources */,
+				AFC6977B1CAC3EE800E18C42 /* QuestionTableViewCell.xib in Resources */,
 				AF2974081CA9880300A13171 /* Assets.xcassets in Resources */,
 				AF2974061CA9880300A13171 /* Main.storyboard in Resources */,
 			);
@@ -323,6 +332,7 @@
 				AF29741F1CA9A1DB00A13171 /* MenuViewController.m in Sources */,
 				AF2974311CAAF1DF00A13171 /* Question.m in Sources */,
 				AF2973FD1CA9880300A13171 /* main.m in Sources */,
+				AFC6977A1CAC3EE800E18C42 /* QuestionTableViewCell.m in Sources */,
 				AF29741C1CA9A0EA00A13171 /* UserSearchViewController.m in Sources */,
 				AF29743A1CAB0A6300A13171 /* JSONParser.m in Sources */,
 			);

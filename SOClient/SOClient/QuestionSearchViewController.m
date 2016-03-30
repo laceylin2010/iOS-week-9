@@ -10,6 +10,7 @@
 #import "StackOverflow.h"
 #import "JSONParser.h"
 #import "Question.h"
+#import "QuestionTableViewCell.h"
 
 @interface QuestionSearchViewController () <UITableViewDataSource, UISearchBarDelegate>
 
@@ -34,6 +35,17 @@
             }
     }];
     
+    [self setupTableView];
+    
+}
+
+-(void)setupTableView
+{
+    self.tableView.estimatedRowHeight = 100;
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    
+    UINib *nib = [UINib nibWithNibName:@"QuestionTableViewCell" bundle:nil];
+    [self.tableView registerNib:nib forCellReuseIdentifier:@"QuestionCell"];
 }
 
 - (void)didReceiveMemoryWarning
@@ -54,8 +66,14 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"questionCell" forIndexPath:indexPath];
-    cell.textLabel.text = self.questionsDataSource[indexPath.row].title;
+    QuestionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"QuestionCell" forIndexPath:indexPath];
+    cell.questionTitleLabel.text = self.questionsDataSource[indexPath.row].title;
+    
+    if (self.questionsDataSource[indexPath.row].isAnswered) {
+        cell.isAnsweredLabel.text = @"Answered: YES";
+    } else {
+        cell.isAnsweredLabel.text = @"Answered: NO";
+    }
 
     return cell;
 }

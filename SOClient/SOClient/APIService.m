@@ -15,7 +15,7 @@
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     [manager GET:url parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"JSON: %@", responseObject);
+//        NSLog(@"JSON: %@", responseObject);
         
         dispatch_async(dispatch_get_main_queue(), ^{
             completionHandler(responseObject, nil);

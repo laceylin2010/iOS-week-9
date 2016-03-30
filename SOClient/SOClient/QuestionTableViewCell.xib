@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="71" id="KGk-i7-Jjw" customClass="QuestionTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="70.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Q:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBP-2I-j7i">
+                        <rect key="frame" x="8" y="25" width="18" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QuestionTitle" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QOl-l9-vSt">
+                        <rect key="frame" x="34" y="8" width="278" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="278" id="ggm-zm-GNl"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IsAnswered" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3y-Hk-8Lw">
+                        <rect key="frame" x="242" y="49" width="70" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="16" id="oBr-0M-ZBf"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QOl-l9-vSt" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="40V-hi-0DP"/>
+                    <constraint firstAttribute="bottom" secondItem="P3y-Hk-8Lw" secondAttribute="bottom" constant="5.5" id="6yS-Om-Bhe"/>
+                    <constraint firstItem="NBP-2I-j7i" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Ec2-p5-OmT"/>
+                    <constraint firstAttribute="trailing" secondItem="P3y-Hk-8Lw" secondAttribute="trailing" constant="8" id="YTc-uz-1Ed"/>
+                    <constraint firstItem="QOl-l9-vSt" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="34" id="aI5-Np-5Xj"/>
+                    <constraint firstItem="NBP-2I-j7i" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lPr-dR-rOC"/>
+                    <constraint firstItem="P3y-Hk-8Lw" firstAttribute="top" secondItem="QOl-l9-vSt" secondAttribute="bottom" constant="20" id="rP7-Ue-L7v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="isAnsweredLabel" destination="P3y-Hk-8Lw" id="oPZ-bO-DEJ"/>
+                <outlet property="questionTitleLabel" destination="QOl-l9-vSt" id="YtT-ik-Ud2"/>
+            </connections>
+            <point key="canvasLocation" x="517" y="366.5"/>
+        </tableViewCell>
+    </objects>
+</document>

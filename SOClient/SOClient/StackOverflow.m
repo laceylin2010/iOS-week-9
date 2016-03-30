@@ -36,7 +36,7 @@ NSString const *kSOAPIBaseURL = @"https://api.stackexchange.com/2.2/";
     
     NSString *searchURL = [NSString stringWithFormat:@"%@users?order=%@&sort=%@&inname=%@&site=stackoverflow", kSOAPIBaseURL, orderParam, sortParam, search];
     
-    NSLog(@"%@", searchURL);
+//    NSLog(@"%@", searchURL);
     
     [APIService getRequestWithURLString:searchURL withCompletion:^(NSDictionary * _Nullable data, NSError * _Nullable error) {
         if (error) {
