@@ -90,4 +90,15 @@
     [self resignFirstResponder];
 }
 
+//NSKeyValueCoding
+
+//@property (strong, nonatomic)NSString *location;
+
+//-(void)setValue:(id)value forKey:(NSString *)key
+//{
+//    [self setValue:@"Seattle" forKey:@"location"]
+//}
+
+
+
 @end
